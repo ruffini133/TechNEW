@@ -45,6 +45,11 @@ img {
     height: auto;
 }
 
+/********************************************* Utilidades **********************************************/
+.texto-centrado {
+    text-align: center;
+}
+
 /****************************************** Degradados *******************************************/
 .degradado {
     color: transparent;
@@ -84,7 +89,7 @@ img {
     margin: 0;
 }
 
-/************************************************** Main ***************************************************/
+/************************************************** sobre-tech ***************************************************/
 .icono {
     display: flex;
     flex-direction: column;
@@ -105,7 +110,7 @@ img {
 .sobre-tech {
     background-image: linear-gradient(to bottom, transparent 50%, var(--colorPrincipal) 0%), url(../img/laptop-5673901_1280.jpg);
     background-repeat: no-repeat;
-    background-size: 100%, 80rem;
+    background-size: 100%, 160rem;
     background-position: center center;
 }
 
@@ -130,4 +135,106 @@ img {
 
 .sobre-tech__parrafo {
     font-size: 2rem;
+}
+
+/************************************************ Modelos *************************************************/
+.modelos__listado-producto {
+    display: grid;
+    gap: 4rem 0;
+}
+
+.modelos__titulo {
+    font-size: 5rem;
+}
+
+.modelo {
+    min-height: 20rem;
+    background-color: #e1e1e1;
+    border-radius: 2rem;
+    background-size: 20rem;
+    color: var(--colorPrincipal);
+    background-image: url(../img/lap.png);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 4rem;
+    transition-property: transform background-size;
+    transition-duration: 0.6s;
+}
+
+.modelo:hover {
+    transform: scale(1.1) rotate(4deg);
+    background-size: 30rem;
+}
+
+.modelo__titulo {
+    color: #2c814d;
+    font-family: var(--fuenteZombie);
+    font-size: 4.5rem;
+}
+
+.modelo__precio {
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+
+/************************************* Footer **************************************/
+.footer {
+    font-weight: 400;
+    font-size: 2rem;
+    color: #1073ba;
+}
+
+/****************************** Media queries *******************************/
+
+/* Header */
+@media (min-width: 768px) {
+    .header__contenido {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Iconos */
+@media (min-width: 768px) {
+    .iconos {
+        display: grid;
+        grid-template-areas: "icono-1 icono-2 icono-3";
+
+        column-gap: 5rem;
+        margin-top: 5rem;
+    }
+}
+
+/* Sobre-tech */
+@media (min-width: 768px) {
+    .sobre-tech {
+        background-size: unset;
+        background-image: unset;
+        background-image: linear-gradient(to left, transparent 50%, var(--colorPrincipal) 0%), url(../img/laptop-5673901_1280.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .sobre-tech-grid {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        padding: 10rem 0;
+    }
+
+    .sobre-tech__texto {
+        display: flex;
+        align-items: center;
+        margin-top: -10rem;
+    }
+
+    .sobre-tech__parrafo {
+        padding: 0 5rem;
+    }
 }
