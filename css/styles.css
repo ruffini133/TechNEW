@@ -3,6 +3,7 @@
     --fuenteSecundaria: 'Lato', sans-serif;
     --colorPrincipal: #1073ba;
     --colorSecundario: #00da55;
+    --fuenteZombie: 'Creepster', system-ui;
 }
 
 html {
@@ -67,12 +68,20 @@ img {
 
 .header__titulo {
     font-family: var(--fuenteSecundaria);
-    font-size: 5rem;
+    font-size: 9rem;
+    margin: 0;
 }
 
 .header__precio--span {
     font-weight: 900;
     font-size: 5rem;
+}
+
+.header__slogan {
+    font-family: var(--fuenteZombie);
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 0;
 }
 
 /************************************************** Main ***************************************************/
@@ -91,4 +100,34 @@ img {
     font-size: 2.8rem;
     color: var(--colorPrincipal);
     text-transform: uppercase;
+}
+
+.sobre-tech {
+    background-image: linear-gradient(to bottom, transparent 50%, var(--colorPrincipal) 0%), url(../img/laptop-5673901_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, 80rem;
+    background-position: center center;
+}
+
+.sobre-tech-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 40rem);
+    row-gap: 5rem;
+}
+
+.sobre-tech__texto {
+    color: #ffffff;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sobre-tech__titulo {
+    font-size: 4rem;
+}
+
+.sobre-tech__parrafo {
+    font-size: 2rem;
 }
