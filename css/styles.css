@@ -238,3 +238,44 @@ img {
         padding: 0 5rem;
     }
 }
+
+/* Modelos */
+
+@media (min-width: 768px) {
+    .modelo {
+        max-height: 20rem;
+    }
+
+    .modelo__titulo {
+        font-size: 2.4rem;
+    }
+
+    .modelo__precio {
+        font-size: 4rem;
+    }
+
+    .modelos__listado-producto {
+        gap: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+
+    .modelo--z {
+
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        min-height: 43rem;
+        justify-content: center;
+        background-color: #1073ba;
+        color: #ffffff;
+
+    }
+
+    .modelo__titulo--z {
+        font-size: 5rem;
+        font-family: var(--fuenteZombie);
+        color: #ffffff;
+    }
+}
